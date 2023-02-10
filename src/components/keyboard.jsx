@@ -2,7 +2,7 @@ import "./keyboard.scss";
 
 import React from "react";
 
-const Keyboard = () => {
+const Keyboard = (props) => {
   const characterRows = [
     ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
     ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
@@ -17,7 +17,11 @@ const Keyboard = () => {
               (
               {row.map((character, j) => {
                 return (
-                  <div className="keyword-button" key={j}>
+                  <div
+                    className="keyword-button"
+                    key={j}
+                    onClick={() => props.onKeyPress(character)}
+                  >
                     {character}
                   </div>
                 );
