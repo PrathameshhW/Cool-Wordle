@@ -3,20 +3,22 @@ import "./app.css";
 import Header from "./components/header";
 import Grid from "./components/grid";
 import Keyboard from "./components/keyboard";
+import ALL_ENGLISH_WORDS from "./components/english.json";
 function App() {
-  const ALL_ENGLISH_WORDS = ["MATCH", "PATCH", "TOUCH", "GREEN", "BLUES"];
-  // const [mysteryWord, setMysteryWord] = useState("MATCH")
-  // const [currentRow, setCurrentRow] = useState(0)
-  // const [currentWord, setCurrentWord] = useState("")
-  // const [guessedWords, setGuessedWords] = useState([])
+  const width = 5;
+  const height = 6;
 
-  const [mysteryWord, setMysteryWord] = useState("MATCH");
+  const validEnglishWords = Object.keys(ALL_ENGLISH_WORDS)
+    .filter((word) => word.length === width)
+    .map((word) => word.toUpperCase());
+  const [mysteryWord, setMysteryWord] = useState(
+    validEnglishWords[Math.floor(Math.random() * validEnglishWords.length)]
+  );
   const [currentRow, setCurrentRow] = useState(0);
   const [currentWord, setCurrentWord] = useState("");
   const [guessedWords, setGuessedWords] = useState([]);
   const [pressedKey, setPressKey] = useState("");
-  const width = 5;
-  const height = 6;
+  const [flashMessage, setFlashMessage] = useState(null);
 
   const onKeyPress = (key) => {
     setPressKey(key);
@@ -45,19 +47,28 @@ function App() {
 
     if (pressedKey === "ENTER") {
       if (currentWord.length < width) {
+        flash("Not enough letters!");
         console.log("Not enough letters!");
       } else {
-        if (ALL_ENGLISH_WORDS.includes(currentWord)) {
+        if (validEnglishWords.includes(currentWord)) {
           setCurrentRow(currentRow + 1);
           setGuessedWords(guessedWords.concat(currentWord));
           setCurrentWord("");
         } else {
+          flash("Not in word list");
           console.log("Not in word list");
         }
       }
     }
     setPressKey("");
   }, [pressedKey]);
+
+  const flash = (message) => {
+    setFlashMessage(message);
+    setTimeout(() => {
+      setFlashMessage(null);
+    }, 1000); // Showing for 10 sec
+  };
 
   const getContent = () => {
     const objectToReturn = {};
@@ -109,6 +120,7 @@ function App() {
         <Header />
         {userWon && <div className="winner">You Win! </div>}
         {userLost && <div className="loser">You Lost :( </div>}
+        {flashMessage != null && <div className="flash">{flashMessage}</div>}
         <Grid width={width} height={height} content={getContent()} />
         <Keyboard onKeyPress={(key) => onKeyPress(key)} />
       </div>
