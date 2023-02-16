@@ -1,4 +1,3 @@
-import getEnglishWords from "../components/english";
 const getLanguageConfigs = () => {
   return {
     English: {
@@ -7,7 +6,7 @@ const getLanguageConfigs = () => {
         ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
         ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "BACKSPACE"],
       ],
-      getWords: () => getEnglishWords(),
+      wordsUrl: "./english.json",
     },
   };
 };
