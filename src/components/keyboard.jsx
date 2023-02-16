@@ -10,7 +10,6 @@ const Keyboard = (props) => {
         {characterRows.map((row, i) => {
           return (
             <div className="row-container" key={i}>
-              (
               {row.map((character, j) => {
                 return (
                   <div
@@ -22,7 +21,6 @@ const Keyboard = (props) => {
                   </div>
                 );
               })}
-              )
             </div>
           );
         })}
