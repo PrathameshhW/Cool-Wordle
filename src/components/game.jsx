@@ -134,7 +134,7 @@ function Game(props) {
   const userWon = guessedWords.includes(mysteryWord);
   const userLost =
     !guessedWords.includes(mysteryWord) && guessedWords.length == height;
-
+  console.log(mysteryWord);
   return (
     <>
       <div className="app-container">
