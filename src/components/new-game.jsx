@@ -33,7 +33,7 @@ const NewGame = () => {
     <>
       <div className="new-game-container">
         <h2>Configure your Wordplay game</h2>
-        <label htmlFor="">Choose a Width: </label>
+        <label htmlFor="">Number of Words: </label>
         <select
           name="width"
           id="width"
@@ -48,7 +48,7 @@ const NewGame = () => {
             );
           })}
         </select>
-        <label htmlFor="">Choose a Height: </label>
+        <label htmlFor="">Number of Chances: </label>
         <select
           name="width"
           id="width"

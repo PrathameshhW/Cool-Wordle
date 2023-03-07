@@ -1,21 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@300&display=swap');
 .new-game-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
-
     label{
         margin:10px 0px;
+        font-family: 'Roboto', serif;
+        letter-spacing: 2px;
+        margin-top: 2rem;
+        font-size: 1.2rem;
     }
     select{
-        width: 150px ;
-        padding: 10px 0px;
+        width: 10% ;
+        padding: 10px 5px;
+        border-radius: 10px;
+        font-size: 1rem;
     }
     button{
         height: 80px ;
         width: 150px;
-        margin-top: 20px;
+        margin-top: 4rem;
+        border-radius: 10px;
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 4rem;
+        font-family: 'Roboto Slab', serif;
+        letter-spacing: 3px;
     }
 }
