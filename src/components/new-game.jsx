@@ -33,7 +33,7 @@ const NewGame = () => {
     <>
       <div className="new-game-container">
         <h2>Configure your Wordplay game</h2>
-        <label htmlFor="">Number of Words: </label>
+        <label htmlFor="">Number of Letters: </label>
         <select
           name="width"
           id="width"
