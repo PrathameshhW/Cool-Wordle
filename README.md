@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Wordle but Cooler Version
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to cooler version of Wordle! This is a game similar to Wordle where players attempt to guess a hidden word within a certain number of attempts. What sets this game apart is the ability for players to customize the length of the word they want to guess and the number of attempts they have.
 
-## Available Scripts
+## How to Play
 
-In the project directory, you can run:
+1. **Setup**: 
+    - Choose the length of the word you want to guess.
+    - Decide how many attempts you'd like to have.
+![image](https://github.com/PrathameshhW/Cool-Wordle/assets/79010748/dbce80e4-f967-4a3f-96c9-f77fdbcc89e0)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Guessing**:
+    - Start by entering your guess.
+    - You'll receive feedback on each guess:
+        - Correct letters in the correct position will be marked green.
+        - Correct letters in the wrong position will be indicated with yellow.
+        - Incorrect letters won't be marked.
+![image](https://github.com/PrathameshhW/Cool-Wordle/assets/79010748/2594b2ae-7bfc-4368-97f7-1a545d165cdc)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+3. **Winning**:
+    - You win if you guess the word within the specified number of attempts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/PrathameshhW/Cool-Wordle/assets/79010748/83f57941-2028-47db-b4c1-0440cc102766)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository to your local machine.
+```bash
+git clone https://github.com/PrathameshhW/Cool-Wordle.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install the dependencies
+```bash
+npm install
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Run the game script.
+```bash
+npm run dev
+```
